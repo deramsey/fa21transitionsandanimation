@@ -1,0 +1,58 @@
+#circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: hsl(45, 75%, 50%);
+    border: 1px solid green;
+    transition: transform 4s, border 6s;
+}
+
+#circle:hover{
+    transform: translateX(400px);
+    border: 12px solid pink;
+}
+/*
+#circle2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: hsl(270, 75%, 50%);
+    transition: transform 3s;
+}
+
+#click:focus ~ #circle2{
+    transform: scale(3);
+}
+
+#click2:focus ~ #circle2{
+    transform: scale(.1);
+}
+*/
+
+#circle2 {
+    width: 150px;
+    height: 150px;
+    background: hsl(270, 75%, 50%);
+    color: white;
+    transition: height 2s cubic-bezier(0,.99,1,.01);
+}
+
+#click:focus ~ #circle2{
+    height: 0;
+}
+
+#click2:focus ~ #circle2{
+    height: 250px;
+}
+
+@keyframes wiggle{0%{left: 0; top: 0; background: hsl(180, 75%, 50%)} 50%{left:250px; top: 200px; background: hsl(75, 75%, 50%)} 100%{left: 0; top: 0; background: hsl(360, 75%, 50%)}}
+
+#circle3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: hsl(180, 75%, 50%);
+    position: relative;
+    animation: wiggle 5s ease-out infinite;
+
+}

@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    height: 100vh;
+    background: hsl(200, 100%, 30%);
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    max-width: max-content;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+.loader{
+    width: 240px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 15px;
+    animation: jump 2s ease-in-out infinite;
+}
+
+.caption{
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+@keyframes jump{
+    0% {
+        margin-top: 0;
+    }
+    35% {
+        margin-top: -75px;
+    }
+
+    70% {
+        margin-top: 0;
+    }
+}
+
+#b {
+    animation-delay: 0.4s
+}
+
+#c{
+    animation-delay: 0.8s
+}
